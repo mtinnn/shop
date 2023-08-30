@@ -1,0 +1,30 @@
+    body {
+        background-color: rgba(255, 255, 255, 0.834);
+        font-family: 'Montserrat', sans-serif;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    .cart-box {
+        background-color: rgb(255, 255, 255);
+        display: block;
+        width: 80%;
+        height: auto;
+        margin-left: 10%;
+        margin-top: 10px;
+        border-radius: 12px;
+        box-shadow: 0px 0px 27px -9px rgba(0, 0, 0, 0.59);
+        -webkit-box-shadow: 0px 0px 27px -9px rgba(0, 0, 0, 0.59);
+        -moz-box-shadow: 0px 0px 27px -9px rgba(0, 0, 0, 0.59);
+    }
+    
+    .back-button {
+        display: block;
+        padding: 10px;
+        border-bottom: 1px solid black;
+        background-color: rgba(69, 64, 64, 0.07);
+    }
+    
+    .cart-total {
+        display: block;
+        padding: 10px;
+    }

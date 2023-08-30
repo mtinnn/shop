@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+    <div class="cart-box">
+        <div class="back-button">
+            <a href="{% url 'home'%}" class='btn btn-danger'>back to shopping</a>
+        </div>
+        <div class="cart-total">
+            <div class="row">
+                <div class="col-sm">
+                    item:{{orderr.get_item_cart}}
+                    
+                </div>
+                <div class="col-sm">
+                    total ={{orderr.get_total_cart}}$
+                </div>
+                <div class="col-2">
+                    <div class="checkout-button">
+                        <a href='#' class="btn btn-primary">checkout</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    
+
+    </div>
+
+    <div class="cart-box">
+        <table class="table table-image">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">item</th>
+                <th scope="col">price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Total</th>
+              </tr>
+            </thead>
+            <tbody>
+            {% for item in items %}
+              <tr>
+                <td class="w-25">
+                <img style='width:40px;' src="{{item.item.image.url}}">
+                </td>
+                <td>{{ item.item.name}}</td>
+                <td>{{ item.item.price}}$</td>
+                
+              <td> <button  onClick='totalitem(1)' type="button" class="btn btn-dark">+</button> <span id='total-item'> {{item.quantity}} </span><button onClick='totalitem(-1)' type="button" class="btn btn-dark">-</button></td>
+                <td>{{item.get_total}}$</td>
+              </tr>
+            {% endfor %}
+
+
+            </tbody>
+      </table>
+
+      
+      
+
+    </div>
+
+
+
+
+
+{% endblock content %}
