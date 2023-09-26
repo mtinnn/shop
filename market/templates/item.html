@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="view-content">
+    
+        <img class="item-img-viwe"  src="{{item.image.url}}" alt="Card image cap">
+        <div class="item-viwe" >
+            <h2 class="item-title">{{item.name}}</h2>  
+            <hr>
+            <p class="item-text">{{item.information}} </p>
+            <a href="{% url 'add-item' item.pk %}" style="display: block;align-item: right;" class="btn btn-primary"> buy</a>
+        </div>            
+        
+
+        <section  class="gradient-custom">
+          <div class="container my-5 py-5" style='width:700px;'>
+            <div class="row d-flex justify-content-center">
+              <div class="col-md-12 col-lg-10 col-xl-8">
+                <div class="card" style='width:700px; margin-left:-135px;'>
+                  <div class="card-body p-4">
+                    <form  enctype="multipart/form-data"  method="POST">
+                      {% csrf_token %}
+      
+                      <div class="card-footer py-3 border-0" style="background-color: #f8f9fa;">
+                        <div class="d-flex flex-start w-100">
+                          <div class="form-outline w-100">
+                            {{ form.as_p}}
+                          </div>
+                        </div>
+                        <div class="float-end mt-2 pt-1">
+                          <button class="button is-success">Submit comment</button>
+                    </form>
+                        </div>
+                      </div>
+                    <hr>
+        
+                    <div class="row">
+                      {% for comment in comments  %}
+                         <div class="col">
+                         <div class="d-flex flex-start">
+                         
+                            <img class="rounded-circle shadow-1-strong me-3"
+                            src='{% static "images/defualt profile.png" %}' alt="avatar" width="65"
+                            height="65" />
+                      
+
+                      
+                          <div class="flex-grow-1 flex-shrink-1">
+                            <div>
+                               <div class="d-flex justify-content-between align-items-center">
+                                  <p class="mb-1">
+                                    {{comment.name}} <span class="small">{{comment.time}}</span>
+                                  </p>
+                                  
+                                  <a  href='#'style='margin-left:450px'></a> 
+                               </div>
+                              <p style='margin-left:10px'class="small mb-0">
+                                {{comment.text}}
+                              </p>
+                            </div>
+                          </div>
+                         </div>
+                         <hr>
+                        </div>
+                        {% endfor %}
+        
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+    
+<div>
+{% endblock content %}

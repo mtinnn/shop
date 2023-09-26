@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="reg-form">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+          <div class="card" style="border-radius: 15px;">
+            <div class="card-body p-5">
+              <h2 class="text-uppercase text-center mb-5">Login</h2>
+              <p  style="color:red;"  class="text-uppercase text-center mb-5">{{error.text}}</p>
+            
+              <form method='POST' novalidate>
+                     {% csrf_token %}
+
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="form3Example1cg">username</label>:
+                      {{form.username}}
+                    
+                    </div>
+
+                    <div class="form-outline mb-4">
+                        <label class="form-label" for="form3Example4cg">Password</label>:
+                        {{form.password}}
+                    </div>
+
+                
+
+
+
+                    <div class="d-flex justify-content-center">
+                    <button type="submit"
+                        class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">login</button>
+                    </div>
+
+                    <p class="text-center text-muted mt-5 mb-0">do you want to register?<a href="{% url 'register'%}"
+                        class="fw-bold text-body"><u>register</u></a></p>
+
+              </form>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+    
+    
+{% endblock content %}

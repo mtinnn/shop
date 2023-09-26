@@ -48,7 +48,7 @@
                 <td>{{ item.item.name}}</td>
                 <td>{{ item.item.price}}$</td>
                 
-              <td> <button  onClick='totalitem(1)' type="button" class="btn btn-dark">+</button> <span id='total-item'> {{item.quantity}} </span><button onClick='totalitem(-1)' type="button" class="btn btn-dark">-</button></td>
+              <td> <a  href="{% url 'add-item' item.item.id %}"  type="button" class="btn btn-dark">+</a> <span id='total-item'> {{item.quantity}} </span><a  href="{% url 'del-item' item.id %}"  type="button" class="btn btn-dark">-</a></td>
                 <td>{{item.get_total}}$</td>
               </tr>
             {% endfor %}

@@ -1,30 +1,85 @@
-    body {
-        background-color: rgba(255, 255, 255, 0.834);
-        font-family: 'Montserrat', sans-serif;
-        font-family: 'Poppins', sans-serif;
-    }
-    
-    .cart-box {
-        background-color: rgb(255, 255, 255);
-        display: block;
-        width: 80%;
-        height: auto;
-        margin-left: 10%;
-        margin-top: 10px;
-        border-radius: 12px;
-        box-shadow: 0px 0px 27px -9px rgba(0, 0, 0, 0.59);
-        -webkit-box-shadow: 0px 0px 27px -9px rgba(0, 0, 0, 0.59);
-        -moz-box-shadow: 0px 0px 27px -9px rgba(0, 0, 0, 0.59);
-    }
-    
-    .back-button {
-        display: block;
-        padding: 10px;
-        border-bottom: 1px solid black;
-        background-color: rgba(69, 64, 64, 0.07);
-    }
-    
-    .cart-total {
-        display: block;
-        padding: 10px;
-    }
+        body {
+            background-color: rgb(255, 255, 255);
+            font-family: 'Montserrat', sans-serif;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .row {
+            padding: 5px !important;
+        }
+        
+        .cart-box {
+            background-color: rgb(255, 255, 255);
+            display: block;
+            width: 80%;
+            height: auto;
+            margin-left: 10%;
+            margin-top: 10px;
+            border: 1px rgb(185, 176, 176) solid;
+            border-radius: 5px;
+        }
+        
+        .view-content {
+            display: block !important;
+            width: 700px;
+            height: 500px;
+            margin: 0px auto;
+            margin-top: 50px;
+            border-radius: 12px;
+        }
+        
+        .item-viwe {
+            display: inline-block;
+            width: 300px;
+            height: 500px;
+            margin-left: 20px;
+        }
+        
+        .item-viwe a {
+            width: 100px;
+            margin-left: 250px;
+        }
+        
+        .item-viwe h2 {
+            margin-left: -8px;
+        }
+        
+        .item-img-viwe {
+            margin-top: -2px;
+            margin-left: 0px;
+            width: 300px;
+            height: 500px;
+            border-radius: 12px;
+        }
+        
+        .card-img-top {
+            border-bottom: 1px rgb(148, 139, 139) solid;
+        }
+        
+        .back-button {
+            display: block;
+            padding: 10px;
+            border-bottom: 1px solid black;
+            background-color: rgba(69, 64, 64, 0.07);
+        }
+        
+        .cart-total {
+            display: block;
+            padding: 10px;
+        }
+        
+        .reg-form {
+            margin-top: 10px;
+        }
+        
+        .form-field {
+            width: 400px;
+        }
+        
+        .nav-2 {
+            margin-left: 60%;
+        }
+        
+        nav {
+            border-bottom: 1px rgba(197, 188, 188, 0.886) solid;
+        }
